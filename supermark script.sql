@@ -37,20 +37,6 @@ DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
 
--- -----------------------------------------------------
--- CREACIÓN DE TABLA PARA DOMICILIO DE USUARIO --
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `supermark`.`domicilio` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `calle` VARCHAR(25) NULL DEFAULT NULL,
-  `numero` INT UNSIGNED NULL DEFAULT NULL,
-  `piso` INT NULL DEFAULT NULL,
-  `departamento` VARCHAR(5) NULL DEFAULT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB
-AUTO_INCREMENT = 11
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
@@ -145,36 +131,20 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 -- -----------------------------------------------------
--- CREACIÓN DE DATOS PARA TABLA DOMICILIO.
--- -----------------------------------------------------
-INSERT INTO `` (`id`,`calle`,`numero`,`piso`,`departamento`) VALUES (1,'ohiggins ',441,2,'A');
-INSERT INTO `` (`id`,`calle`,`numero`,`piso`,`departamento`) VALUES (2,'belgrano',222,NULL,NULL);
-INSERT INTO `` (`id`,`calle`,`numero`,`piso`,`departamento`) VALUES (3,'san martin',2333,NULL,NULL);
-INSERT INTO `` (`id`,`calle`,`numero`,`piso`,`departamento`) VALUES (4,'alsina',728,4,'A');
-INSERT INTO `` (`id`,`calle`,`numero`,`piso`,`departamento`) VALUES (5,'necochea',458,NULL,NULL);
-INSERT INTO `` (`id`,`calle`,`numero`,`piso`,`departamento`) VALUES (6,'san martin',82,NULL,NULL);
-INSERT INTO `` (`id`,`calle`,`numero`,`piso`,`departamento`) VALUES (7,'caseros ',356,NULL,NULL);
-INSERT INTO `` (`id`,`calle`,`numero`,`piso`,`departamento`) VALUES (8,'alvarado ',1230,2,'b');
-INSERT INTO `` (`id`,`calle`,`numero`,`piso`,`departamento`) VALUES (9,'bicentenario',500,NULL,NULL);
-INSERT INTO `` (`id`,`calle`,`numero`,`piso`,`departamento`) VALUES (10,'junin',705,NULL,NULL);
-
--- -----------------------------------------------------
 -- CREACIÓN DE DATOS PARA TABLA USUARIO.
 -- -----------------------------------------------------
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (1,'ana','lopez','22369852','1972-03-22',1,NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (2,'carlos ','sanchez','38542008','1994-10-09',2,NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (3,'roman','riquelme','36452147','1991-10-10',3,NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (4,'juanito','carrascal','20146662','1968-02-21',1,NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (5,'carolina','chocobar','28964733','1982-07-31',4,NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (6,'armando','paredes','39999991','1995-12-25',5,NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (7,'lisa','simpson','42008743','2000-08-15',6,NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (8,'ian','pollera','14182947','1957-11-19',6,NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (9,'josefina','rivera','27654321','1980-04-25',7,NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (10,'carlos','bianchi','38741369','1994-01-02',8,NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (11,'luna','media','25544562','1978-07-09',9,NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (12,'luis','spinetta','29877322','1981-02-20',10,NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (13,'il','m','38343163',NULL,2,'1234',NULL);
-
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (1,'ana','lopez','22369852','1972-03-22',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (2,'carlos ','sanchez','38542008','1994-10-09',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (3,'roman','riquelme','36452147','1991-10-10',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (4,'juanito','carrascal','20146662','1968-02-21',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (5,'carolina','chocobar','28964733','1982-07-31',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (6,'armando','paredes','39999991','1995-12-25',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (7,'lisa','simpson','42008743','2000-08-15',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (8,'ian','pollera','14182947','1957-11-19',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (9,'josefina','rivera','27654321','1980-04-25',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (10,'carlos','bianchi','38741369','1994-01-02',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (11,'luna','media','25544562','1978-07-09',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`id_domicilio`,`contrasenia`,`tipo`) VALUES (12,'luis','spinetta','29877322','1981-02-20',NULL,NULL);
 
 -- -----------------------------------------------------
 -- CREACIÓN DE DATOS PARA TABLA PAGO.
