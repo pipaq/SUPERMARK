@@ -47,15 +47,9 @@ CREATE TABLE IF NOT EXISTS `supermark`.`usuario` (
   `nombre` VARCHAR(30) NULL DEFAULT NULL,
   `apellido` VARCHAR(30) NULL DEFAULT NULL,
   `dni`VARCHAR(15) NULL DEFAULT NULL,
-  `fecha_nacimiento` DATE NULL DEFAULT NULL,
-  `id_domicilio` INT UNSIGNED NOT NULL,
   `contrasenia` VARCHAR(10) NULL DEFAULT NULL,
   `tipo` ENUM('0', '1') NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
-  INDEX `id_domicilio` (`id_domicilio` ASC) VISIBLE,
-  CONSTRAINT `usuario_ibfk_1`
-    FOREIGN KEY (`id_domicilio`)
-    REFERENCES `supermark`.`domicilio` (`id`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 14
 DEFAULT CHARACTER SET = utf8mb4
@@ -133,18 +127,18 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 -- CREACIÓN DE DATOS PARA TABLA USUARIO.
 -- -----------------------------------------------------
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`contrasenia`,`tipo`) VALUES (1,'ana','lopez','22369852','1972-03-22',NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`contrasenia`,`tipo`) VALUES (2,'carlos ','sanchez','38542008','1994-10-09',NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`contrasenia`,`tipo`) VALUES (3,'roman','riquelme','36452147','1991-10-10',NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`contrasenia``tipo`) VALUES (4,'juanito','carrascal','20146662','1968-02-21',NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`contrasenia`,`tipo`) VALUES (5,'carolina','chocobar','28964733','1982-07-31',NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`contrasenia`,`tipo`) VALUES (6,'armando','paredes','39999991','1995-12-25',NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`contrasenia`,`tipo`) VALUES (7,'lisa','simpson','42008743','2000-08-15',NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`contrasenia`,`tipo`) VALUES (8,'ian','pollera','14182947','1957-11-19',NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`contrasenia`,`tipo`) VALUES (9,'josefina','rivera','27654321','1980-04-25',NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`contrasenia`,`tipo`) VALUES (10,'carlos','bianchi','38741369','1994-01-02',NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`contrasenia`,`tipo`) VALUES (11,'luna','media','25544562','1978-07-09',NULL,NULL);
-INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`fecha_nacimiento`,`contrasenia`,`tipo`) VALUES (12,'luis','spinetta','29877322','1981-02-20',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`contrasenia`,`tipo`) VALUES (1,'ana','lopez','22369852',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`contrasenia`,`tipo`) VALUES (2,'carlos ','sanchez','38542008',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni``,`contrasenia`,`tipo`) VALUES (3,'roman','riquelme','36452147',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`contrasenia``tipo`) VALUES (4,'juanito','carrascal','20146662',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni``,`contrasenia`,`tipo`) VALUES (5,'carolina','chocobar','28964733',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni``,`contrasenia`,`tipo`) VALUES (6,'armando','paredes','39999991',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`contrasenia`,`tipo`) VALUES (7,'lisa','simpson','42008743',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`contrasenia`,`tipo`) VALUES (8,'ian','pollera','14182947',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`contrasenia`,`tipo`) VALUES (9,'josefina','rivera','27654321',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`contrasenia`,`tipo`) VALUES (10,'carlos','bianchi','38741369',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`contrasenia`,`tipo`) VALUES (11,'luna','media','25544562',NULL,NULL);
+INSERT INTO `` (`id`,`nombre`,`apellido`,`dni`,`contrasenia`,`tipo`) VALUES (12,'luis','spinetta','29877322',NULL,NULL);
 
 -- -----------------------------------------------------
 -- CREACIÓN DE DATOS PARA TABLA PAGO.
